@@ -22,7 +22,7 @@ namespace Examenp1.Servicio.Logica
         public string Totalletras { get; set; }
         public string Sucursal { get; set; }
 
-        // Constructor que acepta la cadena de conexión
+
         public ServFactura(string connectionString)
         {
             this.connectionString = connectionString;

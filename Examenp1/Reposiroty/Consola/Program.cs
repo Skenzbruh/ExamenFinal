@@ -83,13 +83,13 @@ namespace Examenp1
             clientes.ForEach(cliente =>
                 Console.WriteLine(
                     $"ID: {cliente.id} \n" +
-                    $"Nombre: {cliente.Nombre} \n" +
-                    $"Apellido: {cliente.Apellido} \n" +
-                    $"Documento: {cliente.Documento} \n" +
-                    $"Mail: {cliente.Mail} \n" +
-                    $"Direccion: {cliente.Direccion} \n" +
-                    $"Celular: {cliente.Celular} \n" +
-                    $"Estado: {cliente.Estado} \n"
+                    $"Nombre: {cliente.nombre} \n" +
+                    $"Apellido: {cliente.apellido} \n" +
+                    $"Documento: {cliente.documento} \n" +
+                    $"Mail: {cliente.mail} \n" +
+                    $"Direccion: {cliente.direccion} \n" +
+                    $"Celular: {cliente.celular} \n" +
+                    $"Estado: {cliente.estado} \n"
                 )
             );
         }
@@ -103,7 +103,6 @@ namespace Examenp1
                 return;
             }
 
-            // Aquí sigue la lógica para actualizar el cliente...
         }
 
         static void EliminarCliente(ServCliente ServCliente)
@@ -121,22 +120,22 @@ namespace Examenp1
 
         static void InsertarFactura(ServFactura ServFactura)
         {
-            // Aquí sigue la lógica para insertar una factura...
+           
         }
 
         static void ListarFacturas(ServFactura ServFactura)
         {
-            // Aquí sigue la lógica para listar las facturas...
+
         }
 
         static void ActualizarFactura(ServFactura ServFactura)
         {
-            // Aquí sigue la lógica para actualizar una factura...
+
         }
 
         static void EliminarFactura(ServFactura ServFactura)
         {
-            // Aquí sigue la lógica para eliminar una factura...
+
         }
     }
 }

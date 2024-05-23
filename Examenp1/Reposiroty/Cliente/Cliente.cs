@@ -6,40 +6,40 @@ namespace Examenp1.Reposiroty.Cliente
     {
         public int id { get; set; }
         public int idbanco { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Documento { get; set; }
-        public string Direccion { get; set; }
-        public string Mail { get; set; }
-        public string Celular { get; set; }
-        public string Estado { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public string documento { get; set; }
+        public string direccion { get; set; }
+        public string mail { get; set; }
+        public string celular { get; set; }
+        public string estado { get; set; }
 
         public Cliente(string nombre, string apellido, string documento, string direccion, string mail, string celular, string estado)
         {
-            Nombre = nombre;
-            Apellido = apellido;
-            Documento = documento;
-            Direccion = direccion;
-            Mail = mail;
-            Celular = celular;
-            Estado = estado;
+            nombre = nombre;
+            apellido = apellido;
+            documento = documento;
+            direccion = direccion;
+            mail = mail;
+            celular = celular;
+            estado = estado;
         }
 
         public bool ValidarDatosCliente()
         {
-            if (string.IsNullOrEmpty(Nombre) || string.IsNullOrEmpty(Apellido) || string.IsNullOrEmpty(Documento))
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(documento))
             {
                 Console.WriteLine("Los campos Nombre, Apellido y Documento son obligatorios.");
                 return false;
             }
 
-            if (Nombre.Length < 3 || Apellido.Length < 3 || Documento.Length < 3)
+            if (nombre.Length < 3 || apellido.Length < 3 || documento.Length < 3)
             {
                 Console.WriteLine("Nombre, Apellido y Documento deben tener al menos 3 caracteres.");
                 return false;
             }
 
-            if (Celular.Length != 10)
+            if (celular.Length != 10)
             {
                 Console.WriteLine("El celular debe tener 10 dígitos.");
                 return false;
