@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Net.Mail;
 
-namespace Examenp1.Reposiroty
+namespace Examenp1.Reposiroty.Cliente
 {
     public class Cliente
     {
-        
         public int id { get; set; }
         public int idbanco { get; set; }
         public string Nombre { get; set; }
@@ -15,8 +13,7 @@ namespace Examenp1.Reposiroty
         public string Mail { get; set; }
         public string Celular { get; set; }
         public string Estado { get; set; }
-        
-        
+
         public Cliente(string nombre, string apellido, string documento, string direccion, string mail, string celular, string estado)
         {
             Nombre = nombre;
@@ -28,48 +25,27 @@ namespace Examenp1.Reposiroty
             Estado = estado;
         }
 
-     
         public bool ValidarDatosCliente()
         {
             if (string.IsNullOrEmpty(Nombre) || string.IsNullOrEmpty(Apellido) || string.IsNullOrEmpty(Documento))
             {
-                Console.WriteLine("Los campos .");
+                Console.WriteLine("Los campos Nombre, Apellido y Documento son obligatorios.");
                 return false;
             }
 
             if (Nombre.Length < 3 || Apellido.Length < 3 || Documento.Length < 3)
             {
-                Console.WriteLine("Nombre, Apellido y Cedula deben tener al menos 3 caracteres.");
+                Console.WriteLine("Nombre, Apellido y Documento deben tener al menos 3 caracteres.");
                 return false;
             }
 
-            if (Celular.ToString().Length != 10)
+            if (Celular.Length != 10)
             {
                 Console.WriteLine("El celular debe tener 10 dígitos.");
                 return false;
             }
 
             return true;
-        }
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-           
-            Cliente cliente = new Cliente("Juan", "Perez", "1234567890", "direccion ejemplo", "correo@example.com", "1234567890", "Activo");
-
-            if (cliente.ValidarDatosCliente())
-            {
-                Console.WriteLine("Datos del cliente válidos.");
-                
-            }
-            else
-            {
-                Console.WriteLine("Datos del cliente no válidos.");
-                
-            }
         }
     }
 }

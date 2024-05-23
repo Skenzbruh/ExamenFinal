@@ -2,9 +2,9 @@
 using System.Security;
 using System.Text.RegularExpressions;
 
-namespace Examenp1.Reposiroty
+namespace Examenp1.Reposiroty.factura
 {
-    public class Factura
+    public class factura
     {
         public int Idfact { get; set; }
         public int Idcliente { get; set; }
@@ -18,7 +18,7 @@ namespace Examenp1.Reposiroty
         public string Sucursal { get; set; }
 
         // Constructor
-        public Factura(string numeroFactura, DateTime fechahora, decimal total, decimal totalIva5, decimal totalIva10, decimal totaliva, string totalEnLetras, string sucursal)
+        public factura(string numeroFactura, DateTime fechahora, decimal total, decimal totalIva5, decimal totalIva10, decimal totaliva, string totalEnLetras, string sucursal)
         {
             Nrofact = numeroFactura;
             Fechahora = fechahora;

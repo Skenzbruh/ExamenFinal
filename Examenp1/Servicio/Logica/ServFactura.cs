@@ -5,10 +5,12 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Examenp1.Reposiroty
+namespace Examenp1.Servicio.Logica
 {
     public class ServFactura
     {
+        private string connectionString;
+
         public int Idfact { get; set; }
         public int IdCliente { get; set; }
         public string Nrofact { get; set; }
@@ -19,6 +21,12 @@ namespace Examenp1.Reposiroty
         public decimal Totaliva { get; set; }
         public string Totalletras { get; set; }
         public string Sucursal { get; set; }
+
+        // Constructor que acepta la cadena de conexión
+        public ServFactura(string connectionString)
+        {
+            this.connectionString = connectionString;
+        }
 
         public bool ValidarFactura()
         {
@@ -31,18 +39,17 @@ namespace Examenp1.Reposiroty
 
             if (Total <= 0 || Total5 < 0 || Total10 < 0)
             {
-                Console.WriteLine(" Los totales deben ser valores numericos positivos.");
+                Console.WriteLine("Los totales deben ser valores numericos positivos.");
                 return false;
             }
+
             if (string.IsNullOrEmpty(Totalletras) || Totalletras.Length < 6)
             {
-                Console.WriteLine(" El total en letras debe tener al menos 6 caracteres");
+                Console.WriteLine("El total en letras debe tener al menos 6 caracteres.");
                 return false;
             }
 
             return true;
         }
-
     }
 }
- 

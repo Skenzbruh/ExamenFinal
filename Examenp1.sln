@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examenp1", "Examenp1\Examenp1.csproj", "{05F5ED3D-6486-490B-81B6-4AD54DC864FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examenp1", "Examenp1\Examenp1.csproj", "{05F5ED3D-6486-490B-81B6-4AD54DC864FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,8 +11,8 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{05F5ED3D-6486-490B-81B6-4AD54DC864FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05F5ED3D-6486-490B-81B6-4AD54DC864FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F5ED3D-6486-490B-81B6-4AD54DC864FE}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{05F5ED3D-6486-490B-81B6-4AD54DC864FE}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{05F5ED3D-6486-490B-81B6-4AD54DC864FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05F5ED3D-6486-490B-81B6-4AD54DC864FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
